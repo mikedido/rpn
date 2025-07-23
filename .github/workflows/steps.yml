@@ -17,5 +17,5 @@ jobs:
         run: uv run pytest
       
       - name: Deploy
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+        run: echo "🍏 This job's status is ${{ job.status }}."
   
