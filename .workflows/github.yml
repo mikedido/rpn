@@ -1,0 +1,21 @@
+name: GitHub Actions RPN API 🚀
+on: [push]
+
+jobs:
+  uv-setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Set up Python
+        run: uv python install
+
+      - name: Unit tests
+        run: uv run pytest
+      
+      - name: Deploy
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+  
